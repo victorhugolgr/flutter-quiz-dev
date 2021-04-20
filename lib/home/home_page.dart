@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/appbar/app_bar_widget.dart';
 import 'widgets/level_button/level_button_widget.dart';
+import 'widgets/quiz_card/quiz_card_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -17,13 +18,18 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBarWidget(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
           children: [
-            LevelButtonWidget(label: "Fácil",),
-            LevelButtonWidget(label: "Médio",),
-            LevelButtonWidget(label: "Difícil",),
-            LevelButtonWidget(label: "Perito",),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                LevelButtonWidget(label: "Fácil",),
+                LevelButtonWidget(label: "Médio",),
+                LevelButtonWidget(label: "Difícil",),
+                LevelButtonWidget(label: "Perito",),
+              ],
+            ),
+            QuizCardWidget()
           ],
         ),
       ),
