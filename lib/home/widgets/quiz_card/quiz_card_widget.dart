@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/app_colors.dart';
 import '../../../core/core.dart';
+import '../../../shared/widgets/progress_indicator/progress_indicator_widget.dart';
 
 class QuizCardWidget extends StatelessWidget {
   const QuizCardWidget({Key? key}) : super(key: key);
@@ -41,12 +42,7 @@ class QuizCardWidget extends StatelessWidget {
               ),
               Expanded(
                 flex: 2,
-                child: LinearProgressIndicator(
-                  value: 0.3,
-                  backgroundColor: AppColors.chartSecondary,
-                  valueColor:
-                      AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),
-                ),
+                child: ProgressIndicatorWidget(value: 0.3),
               )
             ],
           )
